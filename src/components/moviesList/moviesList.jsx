@@ -6,8 +6,7 @@ import css from 'components/moviesList/moviesList.module.css';
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
 
-  // console.log(location.state);
-  return (
+   return (
     <ul className={css.list}>
       {movies.map(({ id, title }) => {
         return (

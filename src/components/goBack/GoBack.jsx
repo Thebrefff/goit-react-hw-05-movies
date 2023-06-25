@@ -12,6 +12,4 @@ export const GoBackBtn = ({ path }) => {
   );
 };
 
-// GoBackBtn.propTypes = {
-//   path: PropTypes.object.isRequired,
-// };
+

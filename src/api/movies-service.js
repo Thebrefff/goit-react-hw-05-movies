@@ -6,7 +6,7 @@ export const getTrendingMovies = async () => {
   const { data } = await axios.get(
     `${BASE_URL}trending/all/day?api_key=${API_KEY}`
   );
-  // console.log(data);
+  // console.log(data.);
 
   return data.results.map(({ id, title }) => {
     return { id, title };
@@ -35,7 +35,7 @@ export const getCastInfo = async id => {
   const { data } = await axios.get(
     `${BASE_URL}movie/${id}/credits?api_key=${API_KEY}`
   );
-  // console.log(data.cast);
+  // console.log(data.cast.);
 
   return data.cast.map(({ id, profile_path, name, character }) => {
     return { id, profile_path, name, character };
@@ -46,7 +46,7 @@ export const getReviewsInfo = async id => {
   const { data } = await axios.get(
     `${BASE_URL}movie/${id}/reviews?api_key=${API_KEY}`
   );
-  // console.log(data.results);
+  // console.log(data.results.);
 
   return data.results.map(({ id, author, content }) => {
     return { id, author, content };
